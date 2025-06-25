@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Your Name] | Ph.D. Candidate | Robotics & AR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] | Ph.D. Candidate</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,21 +29,46 @@
       background: white;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    .section {
-      margin-bottom: 2rem;
+    .tabs {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    .tab {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background: #eee;
+      margin-right: 5px;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab.active {
+      background: white;
+      border-bottom: none;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>👋 Hi, I’m [Your Name]</h1>
-    <p>Ph.D. Candidate in Computer Science | Robotics, AR, and Deep Learning Enthusiast</p>
-    <p>I’m passionate about building intelligent systems that bridge perception and action.  
-    My current focus is on AR indoor navigation, efficient attention mechanisms in robotics, and visual-inertial odometry.</p>
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('en')">English</div>
+      <div class="tab" onclick="switchTab('ko')">한국어</div>
+    </div>
 
-    <div class="section">
+    <!-- English Content -->
+    <div id="tab-en" class="tab-content active">
+      <h1>👋 Hi, I’m [Your Name]</h1>
+      <p>Ph.D. Candidate in Computer Science | Robotics, AR, and Deep Learning Enthusiast</p>
+      <p>I’m passionate about building intelligent systems that bridge perception and action. My current focus is on AR indoor navigation, efficient attention mechanisms in robotics, and visual-inertial odometry.</p>
+
       <h2>🔍 Research Interests</h2>
       <ul>
         <li>🧠 Robot Manipulation with Transformer-based Architectures</li>
@@ -51,35 +76,24 @@
         <li>📍 AR-based Indoor Navigation using VIO and QR-based Positioning</li>
         <li>🎯 Domain Generalization in Object Detection (e.g., Detectron2 + CBAM)</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>🛠️ Projects</h2>
       <ul>
-        <li><strong>🔹 Linformer-PerAct: Efficient Robot Manipulation</strong><br>
-        Adapted Linformer-based attention to Perceiver IO model in PerAct  
-        <br><a href="https://github.com/yourname/linformer-peract" target="_blank">[GitHub Repo]</a></li>
-        <br>
-        <li><strong>🔹 AR Indoor Navigation System</strong><br>
-        Built QR-based positioning + VIO + A* pathfinding in Unity3D (tested at Dong-A University)
-        <br><a href="https://yourname.github.io/ar-navigation" target="_blank">[Project Page]</a></li>
-        <br>
-        <li><strong>🔹 Detectron2 + CBAM for Domain Generalization</strong><br>
-        Integrated CBAM with custom ResNet-FPN backbone in Detectron2 and evaluated domain adaptation
-        <br><a href="https://github.com/yourname/cbam-detectron2" target="_blank">[GitHub Repo]</a></li>
+        <li><strong>🔹 Linformer-PerAct</strong>: Efficient Transformer-based manipulation system. <br>
+        <a href="https://github.com/yourname/linformer-peract" target="_blank">[GitHub Repo]</a></li>
+        <li><strong>🔹 AR Indoor Navigation</strong>: QR + VIO + A* in Unity. <br>
+        <a href="https://yourname.github.io/ar-navigation" target="_blank">[Project Page]</a></li>
+        <li><strong>🔹 CBAM-Detectron2</strong>: Robust object detection with attention modules. <br>
+        <a href="https://github.com/yourname/cbam-detectron2" target="_blank">[GitHub Repo]</a></li>
       </ul>
-    </div>
 
-    <div class="section">
-      <h2>📄 Publications / Research in Progress</h2>
+      <h2>📄 Publications / Ongoing Research</h2>
       <ul>
         <li>“Improving Robot Manipulation with Linformer-based Attention”</li>
-        <li>“Hierarchical Diffusion Policies for Kinematics-Aware Control” (In progress)</li>
+        <li>“Hierarchical Diffusion Policies for Kinematics-Aware Control” (in progress)</li>
         <li>“Lightweight AR Indoor Navigation via QR and VIO Fusion”</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>📫 Contact</h2>
       <ul>
         <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
@@ -87,6 +101,55 @@
         <li>Website: <a href="https://yourname.github.io" target="_blank">yourname.github.io</a></li>
       </ul>
     </div>
+
+    <!-- Korean Content -->
+    <div id="tab-ko" class="tab-content">
+      <h1>👋 안녕하세요, [Your Name]입니다</h1>
+      <p>컴퓨터공학 박사과정 연구원 | 로봇 조작, AR, 딥러닝에 관심</p>
+      <p>지각과 행동을 연결하는 지능형 시스템에 관심이 많습니다. 최근에는 AR 실내 내비게이션, 효율적인 어텐션 메커니즘, VIO 기반 위치추정 기술에 집중하고 있습니다.</p>
+
+      <h2>🔍 연구 관심 분야</h2>
+      <ul>
+        <li>🧠 Transformer 기반 로봇 조작</li>
+        <li>📦 확산 모델 기반 멀티태스크 로봇 제어</li>
+        <li>📍 VIO 및 QR 기반의 AR 실내 내비게이션</li>
+        <li>🎯 객체 탐지의 도메인 일반화 (Detectron2 + CBAM)</li>
+      </ul>
+
+      <h2>🛠️ 프로젝트</h2>
+      <ul>
+        <li><strong>🔹 Linformer-PerAct</strong>: 효율적인 어텐션 로봇 조작 모델<br>
+        <a href="https://github.com/yourname/linformer-peract" target="_blank">[GitHub 링크]</a></li>
+        <li><strong>🔹 AR 실내 내비게이션</strong>: QR+VIO+A* 기반 Unity 구현<br>
+        <a href="https://yourname.github.io/ar-navigation" target="_blank">[프로젝트 페이지]</a></li>
+        <li><strong>🔹 CBAM-Detectron2</strong>: 주의 메커니즘 기반 객체 탐지 모델<br>
+        <a href="https://github.com/yourname/cbam-detectron2" target="_blank">[GitHub 링크]</a></li>
+      </ul>
+
+      <h2>📄 연구 성과 및 진행 중인 논문</h2>
+      <ul>
+        <li>Linformer 기반 어텐션 로봇 조작 연구</li>
+        <li>계층적 확산 정책 기반 조작 정책 연구 (진행 중)</li>
+        <li>경량화된 AR 실내 내비게이션 시스템 구현</li>
+      </ul>
+
+      <h2>📫 연락처</h2>
+      <ul>
+        <li>이메일: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></li>
+        <li>웹사이트: <a href="https://yourname.github.io" target="_blank">yourname.github.io</a></li>
+      </ul>
+    </div>
   </div>
+
+  <script>
+    function switchTab(lang) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      document.querySelector('.tab[onclick="switchTab(\'' + lang + '\')"]').classList.add('active');
+      document.getElementById('tab-' + lang).classList.add('active');
+    }
+  </script>
 </body>
 </html>
